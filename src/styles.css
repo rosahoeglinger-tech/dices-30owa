@@ -1,0 +1,152 @@
+body {
+  margin: 0;
+  font-family: system-ui, sans-serif;
+  background: #f6f8fa;
+  color: #111827;
+}
+
+#app {
+  max-width: 720px;
+  margin: 4rem auto;
+  padding: 1.5rem;
+  background: white;
+  border-radius: 18px;
+  box-shadow: 0 18px 60px rgba(0, 0, 0, 0.08);
+}
+
+button {
+  margin-top: 1rem;
+  padding: 0.8rem 1.2rem;
+  border: none;
+  border-radius: 999px;
+  background: #2563eb;
+  color: white;
+  font-size: 1rem;
+  cursor: pointer;
+}
+
+button:hover {
+  background: #1d4ed8;
+}
+
+.controls {
+  margin-top: 1.5rem;
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+}
+
+#dice-board {
+  display: grid;
+  grid-template-columns: repeat(3, minmax(0, 1fr));
+  gap: 1rem;
+  margin-top: 1.5rem;
+}
+
+.die {
+  display: grid;
+  place-items: center;
+  gap: 0.75rem;
+  padding: 1rem;
+  border: 2px solid #d1d5db;
+  border-radius: 18px;
+  background: #ffffff;
+  cursor: pointer;
+  transition: transform 0.15s ease, border-color 0.15s ease, box-shadow 0.15s ease;
+}
+
+.die:hover {
+  transform: translateY(-2px);
+  border-color: #93c5fd;
+}
+
+.die.selected {
+  background: #cbd5e1;
+  border-color: #94a3b8;
+  color: #475569;
+  box-shadow: none;
+}
+
+.die.selected img {
+  filter: grayscale(100%) brightness(0.95);
+  opacity: 1;
+}
+
+.die.selected .die-label {
+  color: #334155;
+}
+
+.die.kept {
+  background: #d1fae5;
+  border-color: #22c55e;
+  color: #166534;
+}
+
+.die.kept img {
+  filter: hue-rotate(90deg) saturate(150%) brightness(1.05);
+}
+
+.die.kept .die-label {
+  color: #166534;
+}
+
+.die img {
+  width: 100%;
+  max-width: 120px;
+  height: auto;
+  display: block;
+}
+
+.die-label {
+  font-size: 0.9rem;
+  color: #334155;
+}
+
+#status,
+#result,
+#score {
+  margin-top: 1rem;
+  font-size: 1rem;
+}
+#score {
+  font-weight: 700;
+  color: #1d4ed8;
+}
+
+.dialog {
+  position: fixed;
+  inset: 0;
+  display: grid;
+  place-items: center;
+  background: rgba(15, 23, 42, 0.6);
+  padding: 1.5rem;
+  z-index: 100;
+}
+
+.dialog.hidden {
+  display: none;
+}
+
+.dialog-panel {
+  background: white;
+  border-radius: 24px;
+  padding: 2rem;
+  max-width: 420px;
+  width: 100%;
+  text-align: center;
+  box-shadow: 0 24px 60px rgba(15, 23, 42, 0.18);
+}
+
+.dialog-panel h2 {
+  margin: 0 0 1rem;
+}
+
+.dialog-panel p {
+  margin: 0 0 1.5rem;
+  color: #334155;
+}
+
+.dialog-panel button {
+  width: auto;
+  margin-top: 0;
+}

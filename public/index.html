@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>TypeScript HTML App</title>
+    <link rel="stylesheet" href="/src/styles.css" />
+  </head>
+  <body>
+    <div id="app">
+      <h1>Dice Draft Challenge</h1>
+      <p>Roll 6 dice, keep at least one each round, and reroll the remaining dice until all are kept.</p>
+      <div id="status"></div>
+      <div id="dice-board" class="dice-grid"></div>
+      <div class="controls">
+        <button id="action-btn">Keep selected and roll remaining</button>
+        <button id="reset-btn">Restart Game</button>
+      </div>
+      <div id="result"></div>
+      <div id="score"></div>
+    </div>
+
+    <div id="finish-dialog" class="dialog hidden" role="dialog" aria-modal="true" aria-labelledby="finish-title">
+      <div class="dialog-panel">
+        <h2 id="finish-title">Game Finished</h2>
+        <p id="finish-message"></p>
+        <button id="finish-close">Close</button>
+      </div>
+    </div>
+
+    <script type="module" src="/src/main.ts"></script>
+  </body>
+</html>
