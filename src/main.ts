@@ -431,7 +431,7 @@ if (startPlayBtn) {
   startPlayBtn.addEventListener('click', startPlay);
 }
 
-if (closePlayerDialog) {
+if (closePlayerDialog) { 
   closePlayerDialog.addEventListener('click', closePlayerDialogPanel);
 }
 
