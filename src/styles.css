@@ -113,6 +113,49 @@ button:hover {
   color: #1d4ed8;
 }
 
+#players-summary {
+  margin: 1rem 0;
+  padding: 1rem;
+  background: #f1f5f9;
+  border-radius: 14px;
+  color: #0f172a;
+}
+
+#players-summary strong {
+  display: block;
+  margin-bottom: 0.5rem;
+}
+
+#players-summary ul {
+  margin: 0;
+  padding-left: 1.2rem;
+}
+
+.player-form {
+  display: flex;
+  gap: 0.75rem;
+  margin-bottom: 1rem;
+}
+
+.player-form input {
+  flex: 1;
+  padding: 0.8rem 1rem;
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  font-size: 1rem;
+}
+
+.player-dialog-actions {
+  display: flex;
+  gap: 0.75rem;
+  justify-content: flex-end;
+  margin-top: 1rem;
+}
+
+.player-dialog-panel {
+  width: min(480px, 100%);
+}
+
 .dialog {
   position: fixed;
   inset: 0;

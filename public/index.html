@@ -11,13 +11,30 @@
       <h1>Dice Draft Challenge</h1>
       <p>Roll 6 dice, keep at least one each round, and reroll the remaining dice until all are kept.</p>
       <div id="status"></div>
+      <div id="players-summary"></div>
       <div id="dice-board" class="dice-grid"></div>
       <div class="controls">
+        <button id="overview-btn">Players</button>
         <button id="action-btn">Keep selected and roll remaining</button>
         <button id="reset-btn">Restart Game</button>
       </div>
       <div id="result"></div>
       <div id="score"></div>
+    </div>
+
+    <div id="player-dialog" class="dialog hidden" role="dialog" aria-modal="true" aria-labelledby="player-dialog-title">
+      <div class="dialog-panel player-dialog-panel">
+        <h2 id="player-dialog-title">Player Overview</h2>
+        <div class="player-form">
+          <input id="player-name-input" type="text" placeholder="Enter player name" />
+          <button id="add-player-btn">Add player</button>
+        </div>
+        <ul id="player-list"></ul>
+        <div class="player-dialog-actions">
+          <button id="start-play-btn" disabled>Start Play</button>
+          <button id="close-player-dialog">Close</button>
+        </div>
+      </div>
     </div>
 
     <div id="finish-dialog" class="dialog hidden" role="dialog" aria-modal="true" aria-labelledby="finish-title">
